@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --brown: #96562e;
+  --white: #fff;
+  --black: #000;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: var(--white);
+}
+
+.address-details h1 {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.address-details p {
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+#address-label {
+  font-size: 16px;
+}
+
+input[type="text"] {
+  padding: 6px;
+  margin: 6px 0;
+  width: 100%;
+  border: 2px solid var(--white);
+  border-radius: 4px;
+  color: var(--black);
+}
+
+input[type="checkbox"] {
+  accent-color: var(--brown);
+  height: 20px;
+  width: 20px;
+}
+
+input[type="radio"] {
+  accent-color: var(--brown);
+  height: 16px;
+  width: 16px;
+}
+
+#order-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("images/clothing-bg-1.jpg");
+  background-color: var(--black);
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 768px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  background: #1c1c1d;
+}
+
+.input-forms {
+  height: 100%;
+  padding: 16px;
+  min-width: 256px;
+}
+
+.customer-info {
+  margin-top: 16px;
+}
+
+.menu-items {
+  padding: 16px;
+  height: 100%;
+  min-width: 256px;
+}
+
+.menu-items h2 {
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 15px;
+}
+
+.clothing-option {
+  display: flex;
+  align-items: center;
+  padding: 6px 0px;
+}
+
+.clothing {
+  margin-right: 10px;
+}
+
+.payment {
+  display: grid;
+  grid-template-rows: 1fr;
+  padding: 16px;
+  height: 100%;
+  min-width: 256px;
+}
+
+.payment h2 {
+  margin-bottom: 10px;
+}
+
+.payment p {
+  margin-bottom: 6px;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: right;
+}
+
+#total {
+  margin-bottom: 24px;
+}
+
+button {
+  display: inline-block;
+  outline: none;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#feeBtn {
+  color: var(--black);
+  background: var(--white);
+}
+
+#orderBtn {
+  color: var(--white);
+  background: var(--brown);
+}
+
+#feeBtn.spinning #orderBtn.spinning {
+  padding-right: 15px;
+}
+
+button.spinning:before {
+  content: "";
+  border-radius: 50%;
+  right: 10px;
+  top: 50%;
+  position: absolute;
+  animation: rotate360 0.5s infinite linear, exist 0.1s forwards ease;
+}
+
+#feeBtn.spinning:before {
+  border-right: 3px solid var(--brown);
+}
+
+#orderBtn.spinning:before {
+  border-right: 3px solid var(--white);
+}
+
+@keyframes rotate360 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes exist {
+  100% {
+    width: 15px;
+    height: 15px;
+    margin: -8px 5px 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #order-details {
+    height: auto;
+  }
+
+  .container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 16px;
+  }
+}
+
+/* Order Confirmation CSS */
+
+.order-container {
+  background-image: url(./images/clothing-bg-2.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.order-wrap {
+  padding: 32px;
+  height: 500px;
+  border-radius: 10px;
+  background: #1c1c1d;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.order-headings {
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 8px;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#btn-link {
+  width: 100%;
+}
+
+#btn {
+  color: var(--white);
+  background: var(--brown);
+}

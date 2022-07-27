@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Clothing</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="order-details">
+      <div class="container">
+        <div class="input-forms">
+          <div class="address-details">
+            <h1>Top Clothing</h1>
+            <p>11 Madison Ave, New York, NY 10010</p>
+            <p>+1 (650) 5555555</p>
+            <p id="address-label">Enter your address below</p>
+          </div>
+          <form onsubmit="return false">
+          <div class="address-wrap"> 
+            <input type="text" placeholder="Street" id="street" name="street" required />
+            <input type="text" placeholder="City" id="city" name="city" required/>
+            <input
+              type="text"
+              placeholder="Zipcode"
+              id="zipcode"
+              name="zipcode"
+              required
+            />
+          </div>
+          <div class="customer-info">
+            <p>Contact Details</p>
+            <input
+              type="text"
+              placeholder="First Name"
+              id="name"
+              name="dropoff_contact_given_name"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              id="lastname"
+              name="dropoff_contact_family_name"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Phone Number"
+              id="phonenumber"
+              name="dropoff_phone_number"
+              type="number"
+              required
+            />
+          </div>
+        </div>
+        <div class="menu-items">
+          <h2>Menu Items</h2>
+          <div class="clothing-option">
+            <input
+              type="checkbox"
+              name="items"
+              value="9900"
+              class="clothing"
+          
+            />
+            <label for="items">Brown Leather Jacket $99</label>
+          </div>
+          <div class="clothing-option">
+            <input type="checkbox" name="items" value="9900" class="clothing"    />
+            <label for="items">Black Leather Jacket $99</label>
+          </div>
+          <div class="clothing-option">
+            <input type="checkbox" name="items" value="4900" class="clothing"     />
+            <label for="items">Gray Hooded Jacket $49</label>
+          </div>
+          <div class="clothing-option">
+            <input type="checkbox" name="items" value="7900" class="clothing" />
+            <label for="items">Fitted Denim Jeans $79</label>
+          </div>
+          <div class="clothing-option">
+            <input type="checkbox" name="items" value="2900" class="clothing" />
+            <label for="items">Slim Fit T-Shirt $29</label>
+          </div>
+          <div class="clothing-option">
+            <input type="checkbox" name="items" value="1900" class="clothing" />
+            <label for="items">Premium Dress Socks $19</label>
+          </div>
+        </div>
+        <div class="payment">
+          <div>
+            <h2>Payment Summary</h2>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Subtotal:</th>
+                  <td id="price">$0.00</td>
+                </tr>
+                <tr>
+                  <th>Delivery Fee:</th>
+                  <td id="fee">$0.00</td>
+                </tr>
+                <tr>
+                  <th>Order Total:</th>
+                  <td id="total">$0.00</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="tip-section">
+              <div class="tip-options">       
+              </div>
+            </div>
+          </div>
+          <div class="btns">
+             <!-- <button id="feeBtn" onclick="getFee()">
+              Get Fee
+            </button> -->
+            <button id="orderBtn" onclick="createDelivery()">
+              Place Order
+            </button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="order.js"></script>
+    <script src="delivery.js"></script>
+  </body>
+</html>
+
