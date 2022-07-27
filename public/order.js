@@ -46,3 +46,20 @@ zipcode.addEventListener("focusout", callFeeAPI);
 fname.addEventListener("focusout", callFeeAPI);
 lastname.addEventListener("focusout", callFeeAPI);
 phonenumber.addEventListener("focusout", callFeeAPI);
+
+// Button Animation
+const orderBtn = document.getElementById("orderBtn");
+
+orderBtn.addEventListener(
+  "click",
+  function () {
+    orderBtn.innerHTML = "Placing your order";
+    orderBtn.classList.add("spinning");
+
+    setTimeout(function () {
+      orderBtn.classList.remove("spinning");
+      orderBtn.innerHTML = "Place Order";
+    }, 1000);
+  },
+  false
+);
